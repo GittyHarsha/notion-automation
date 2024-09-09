@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Upsolve Tracker",
+    "version": "1.0",
+    "description": "Parse the current webpage and communicate with Notion via the Notion API.",
+    "permissions": [
+      "activeTab",
+      "storage",
+      "identity"
+    ],
+    "host_permissions": [
+      "https://www.codeforces.com/*"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "type": "module"
+      }
+    ]
+  }
+  
