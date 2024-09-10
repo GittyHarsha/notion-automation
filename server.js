@@ -26,7 +26,7 @@ app.post('/', async (req, res) => {
     console.log('Received message:', msg);
     switch (msg.type) {
         case "parseUrlAndContents": {
-            if (await utils.pageExists(msg.link) != true) {
+            if (await utils.pageExists(msg.link) === false) {
                 await utils.createNewDatabaseEntry(msg);
             }
             break;

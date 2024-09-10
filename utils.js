@@ -55,7 +55,12 @@ async function updateStatus(link) {
 
 
 async function pageExists(link) {
-  return getPage(link) !=null;
+  if( !getPage(link)) {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 async function isQuestionSolved(link) {
   try {
