@@ -55,7 +55,7 @@ async function updateStatus(link) {
 
 
 async function pageExists(link) {
-  if( !getPage(link)) {
+  if( typeof(await getPage(link)) === 'object') {
     return true;
   }
   else {
